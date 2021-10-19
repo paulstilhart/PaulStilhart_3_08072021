@@ -1,12 +1,25 @@
+@charset "UTF-8";
 /* Reset CSS sur le body */
+* {
+  box-sizing: border-box;
+  color: black;
+}
+
 body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
 }
+body main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-/* Importation des autres fichiers scss */
+/* VARIABLES */
+/* HEADER */
 header {
   width: 100%;
   height: 3rem;
@@ -18,15 +31,9 @@ header {
   margin: 0;
   box-shadow: 0rem 0rem 0.5rem 0.2rem rgba(119, 119, 119, 0.1);
 }
-
 header img {
   width: 10rem;
   object-fit: fill;
-}
-
-main {
-  width: 100%;
-  height: auto;
 }
 
 /* RESTAURANTS */
@@ -39,22 +46,170 @@ main {
   flex-direction: column;
   gap: 1rem;
 }
+#restaurants h1 {
+  margin-bottom: 0;
+}
 
 .restaurantCard {
   width: 100%;
   height: 15rem;
   border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
 }
 
 .restaurantCardImage {
   width: 100%;
-  height: 50%;
+  height: 70%;
+  position: relative;
 }
-
 .restaurantCardImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.restaurantCardImage span {
+  background-color: #99E2D0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+}
+.restaurantCardImage span p {
+  margin: 0;
+  padding: 0;
+  color: #185818;
+  font-weight: bold;
+}
+
+.restaurantCardDescription {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.restaurantCardDescription p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.restaurantCardDescription span {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+}
+.restaurantCardDescription .fullHeart i {
+  color: rgba(255, 255, 255, 0);
+}
+.restaurantCardDescription .fullHeart i:hover {
+  color: #9356DC;
+}
+
+/* 
+1. INSTALLATION DE SASS
+
+Depuis le site SASS en mode standAlone (depuis page github)
+on DL une archive, le dossier s'appelle dart-sass
+on le met dans le projet
+on crée ensuite un dossier sass avec toutes les feuilles dedans
+la principale étant style.scss
+
+on travaille ensuite avec le terminal
+./dart-sass/sass --help
+
+pour générer un fichier css
+./dart-sass/sass sass/style.scss style.css
+on a aussi un fichier style.css.map
+
+Pour suivre directement on utilise --watch
+./dart-sass/sass sass/style.scss style.css --watch
+
+On teste le fichier .map
+On crée une structure HTML5
+Le fichier map permet d'expliquer au navigateur le lien entre chaque ligne css et scss
+
+Exemple import de fichier
+minireset css
+@import "libs/reset.css";
+
+il est possible ensuite d'installer SASS globalement depuis le système
+pour l'utiliser depuis le path
+
+
+2. IMBRICATION
+
+cela permet d'imbriquer et d'utiliser la syntaxe suivante
+
+.btn {
+    background: #FFF;
+
+    .icon {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: red;
+    }
+
+    &:hover {
+        background: #000;
+    }
+
+}
+
+QUI DONNERA LE CODE SUIVANT
+
+.btn {
+    background: #FFF;
+}
+.btn .icon {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: red;
+}
+.btn:hover {
+    background: #000;
+}
+
+c'est bien d'utiliser 2 niveaux maximum en descendant 
+
+le & permet de les mettre directement collés
+
+et dans l'autre sens aussi, par exemple:
+
+.btn{
+    .theme-vert & {
+        background: green;
+    }
+}
+
+donnera
+
+.theme-vert .btn{
+    background: green;
+}
+
+on peut aussi écrire les mediaqueries dans l'imbrication
+seul inconvenient, ça ne groupe pas les mediaqueries dans le css final
+
+
+3. HERITAGE SUR SASS
+
+
+
+*/
 
 /*# sourceMappingURL=style.css.map */
