@@ -36,6 +36,54 @@ header img {
   object-fit: fill;
 }
 
+/* LOCALISATION */
+#localisation {
+  width: 100%;
+  height: auto;
+}
+#localisation .gps {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+  background-color: #8080804b;
+}
+#localisation .gps ul {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#localisation .explore {
+  width: 100%;
+  height: auto;
+  padding: 2rem 2rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#localisation .explore h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#localisation .explore p {
+  text-align: center;
+}
+#localisation .explore button {
+  padding: 1rem;
+  background-color: #9356DC;
+  color: white;
+  border: none;
+  border-radius: 3rem;
+}
+
 /* RESTAURANTS */
 #restaurants {
   width: 100%;
@@ -149,6 +197,31 @@ header img {
     text-decoration: none;
   }
 }
+/* FOOTER */
+footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding: 1rem;
+}
+footer img {
+  width: 10rem;
+  object-fit: fill;
+  color: white;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+footer ul i {
+  color: white;
+  font-size: 0.8rem;
+}
+footer ul li {
+  color: white;
+}
+
 /* 
 1. INSTALLATION DE SASS
 
