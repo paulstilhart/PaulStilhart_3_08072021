@@ -50,6 +50,15 @@ header img {
   margin-bottom: 0;
 }
 
+.restaurantsBox {
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .restaurantCard {
   width: 100%;
   height: 15rem;
@@ -118,6 +127,28 @@ header img {
   color: #9356DC;
 }
 
+/* RESTAURANTS RESPONSIVES */
+@media screen and (min-width: 767px) {
+  .restaurantsBox {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .restaurantCard {
+    width: calc(50% - 0.5rem);
+    height: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+}
 /* 
 1. INSTALLATION DE SASS
 
