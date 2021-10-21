@@ -1,8 +1,16 @@
 @charset "UTF-8";
-/* Reset CSS sur le body */
 * {
   box-sizing: border-box;
   color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
 }
 
 body {
@@ -18,11 +26,9 @@ body main {
   padding: 0;
 }
 
-/* VARIABLES */
-/* HEADER */
 header {
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -31,11 +37,44 @@ header {
   margin: 0;
   box-shadow: 0rem 0rem 0.5rem 0.2rem rgba(119, 119, 119, 0.1);
 }
-header img {
-  width: 10rem;
-  object-fit: fill;
+header h1 {
+  font-size: 2rem;
 }
 
+footer {
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+}
+footer h1 {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0rem 0rem 1rem 0rem;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+footer ul li {
+  padding-bottom: 0.5rem;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+footer ul li a i {
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* Reset CSS sur le body */
+/* VARIABLES */
+/* HEADER */
 /* LOCALISATION */
 #localisation {
   width: 100%;
@@ -68,7 +107,7 @@ header img {
   justify-content: center;
   align-items: center;
 }
-#localisation .explore h1 {
+#localisation .explore h2 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -198,37 +237,6 @@ header img {
   }
 }
 /* FOOTER */
-footer {
-  width: 100%;
-  height: auto;
-  background-color: black;
-  padding: 1rem;
-}
-footer img {
-  width: 10rem;
-  object-fit: fill;
-  color: white;
-}
-footer ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-footer li {
-  padding-bottom: 0.5rem;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-footer i {
-  color: white;
-  font-size: 0.8rem;
-}
-
 /* 
 1. INSTALLATION DE SASS
 
