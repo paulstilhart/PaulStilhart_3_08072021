@@ -1,51 +1,11 @@
-*{
-    box-sizing: border-box;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-}
-
-h1{
-    font-family: 'Shrikhand', cursive;
-}
-
-.logo{
-    font-family: 'Shrikhand', cursive;
-}
-
-body{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-
-    main{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-
 
 
 @import "./abstracts/variables";
 
+@import "./base/reset";
+
 @import "./layout/header";
 @import "./layout/footer";
-
-
-
-/* Reset CSS sur le body */
-
-
-
-
-/* VARIABLES */
-
-
-
-/* HEADER */
 
 
 
@@ -53,14 +13,13 @@ body{
 
 #localisation{
     width: 100%;
-    height: auto;
 
     .gps{
         width: 100%;
         height: auto;
         margin: 0;
         padding: 1rem;
-        background-color: $grey;
+        background-color: $greystrong;
 
         ul{
             width: 100%;
@@ -83,10 +42,9 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: $greysoft;
 
         h2{
-            margin: 0;
-            padding: 0;
             text-align:center;
         }
 
@@ -96,28 +54,71 @@ body{
 
         button{
             padding: 1rem;
-            background-color: $purple;
-            color: white;
+            background: $gradient;
             border: none;
             border-radius: 3rem;
+
+            strong{
+                color:white;
+            }
         }
     }
 }
+
+#functioning{
+    width: 100%;
+    margin: 0;
+    padding: 3rem 1rem 4rem 1rem;
+
+    .step_box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 2rem;
+
+        .step{
+            width: 100%;
+            height: 4.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 1rem;
+            background-color: $greysoft;
+            box-shadow: $shadowMedium;
+
+            figure{
+                background-color: $purple;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+                background:$purple;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                }
+            }
+
+            i{
+                padding: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+}
+
 
 /* RESTAURANTS */
 
 #restaurants{
     width: 100%;
     height: auto;
-    background-color: $grey;
-    padding: 1rem 1rem 3rem 1rem;
+    background-color: $greysoft;
+    padding: 3.5rem 1rem 4rem 1rem;
     display: flex;
     flex-direction: column;
     gap:1rem;
-
-    h1{
-        margin-bottom: 0;
-    }
 }
 
 .restaurantsBox{
@@ -138,6 +139,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
+    box-shadow: $shadowMedium;
 }
 
 .restaurantCardImage{
@@ -159,11 +161,12 @@ body{
             top: 1rem;
             right: 1rem;
             padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+            border-radius: 0.2rem;
 
             p{
                 margin:0;
                 padding: 0;
-                color: rgb(24, 88, 24);
+                color: rgba(24, 88, 24, 0.753);
                 font-weight: bold;
             }
         }
@@ -232,102 +235,3 @@ body{
 
 /* FOOTER */
 
-
-
-
-
-
-
-/* 
-1. INSTALLATION DE SASS
-
-Depuis le site SASS en mode standAlone (depuis page github)
-on DL une archive, le dossier s'appelle dart-sass
-on le met dans le projet
-on crée ensuite un dossier sass avec toutes les feuilles dedans
-la principale étant style.scss
-
-on travaille ensuite avec le terminal
-./dart-sass/sass --help
-
-pour générer un fichier css
-./dart-sass/sass sass/style.scss style.css
-on a aussi un fichier style.css.map
-
-Pour suivre directement on utilise --watch
-./dart-sass/sass sass/style.scss style.css --watch
-
-On teste le fichier .map
-On crée une structure HTML5
-Le fichier map permet d'expliquer au navigateur le lien entre chaque ligne css et scss
-
-Exemple import de fichier
-minireset css
-@import "libs/reset.css";
-
-il est possible ensuite d'installer SASS globalement depuis le système
-pour l'utiliser depuis le path
-
-
-2. IMBRICATION
-
-cela permet d'imbriquer et d'utiliser la syntaxe suivante
-
-.btn {
-    background: #FFF;
-
-    .icon {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background: red;
-    }
-
-    &:hover {
-        background: #000;
-    }
-
-}
-
-QUI DONNERA LE CODE SUIVANT
-
-.btn {
-    background: #FFF;
-}
-.btn .icon {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background: red;
-}
-.btn:hover {
-    background: #000;
-}
-
-c'est bien d'utiliser 2 niveaux maximum en descendant 
-
-le & permet de les mettre directement collés
-
-et dans l'autre sens aussi, par exemple:
-
-.btn{
-    .theme-vert & {
-        background: green;
-    }
-}
-
-donnera
-
-.theme-vert .btn{
-    background: green;
-}
-
-on peut aussi écrire les mediaqueries dans l'imbrication
-seul inconvenient, ça ne groupe pas les mediaqueries dans le css final
-
-
-3. HERITAGE SUR SASS
-
-
-
-*/

@@ -1,12 +1,11 @@
 footer{
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.801);
     padding: 1rem;
 
     h1{
         color: white;
         font-size: 1rem;
-        margin: 0;
         padding: 0rem 0rem 1rem 0rem;
     }
 
@@ -14,23 +13,22 @@ footer{
         padding: 0;
         margin: 0;
         list-style: none;
+    }
 
-        li{
-            padding-bottom: 0.5rem;
+    li{
+        padding-bottom: 0.5rem;
+    }
 
-            a{
-                color: white;
-                text-decoration: none;
-        
-                &:hover{
-                    text-decoration:underline;
-                }
-
-                i{
-                    color:white;
-                    font-size: 0.8rem;
-                }
-            }
+    a{
+        color: white;
+        text-decoration: none;
+        &:hover{
+            text-decoration:underline;
         }
+    }
+    
+    i{
+        color:white;
+        font-size: 0.8rem;
     }
 }

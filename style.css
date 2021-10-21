@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* Reset CSS sur le body 
+et définition des variables
+*/
 * {
   box-sizing: border-box;
   color: black;
@@ -26,6 +29,11 @@ body main {
   padding: 0;
 }
 
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   width: 100%;
   height: 4rem;
@@ -35,7 +43,7 @@ header {
   align-items: center;
   padding: 1rem;
   margin: 0;
-  box-shadow: 0rem 0rem 0.5rem 0.2rem rgba(119, 119, 119, 0.1);
+  box-shadow: 0rem 0rem 0.2rem 0.2rem rgba(128, 128, 128, 0.178);
 }
 header h1 {
   font-size: 2rem;
@@ -43,13 +51,12 @@ header h1 {
 
 footer {
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.801);
   padding: 1rem;
 }
 footer h1 {
   color: white;
   font-size: 1rem;
-  margin: 0;
   padding: 0rem 0rem 1rem 0rem;
 }
 footer ul {
@@ -57,35 +64,31 @@ footer ul {
   margin: 0;
   list-style: none;
 }
-footer ul li {
+footer li {
   padding-bottom: 0.5rem;
 }
-footer ul li a {
+footer a {
   color: white;
   text-decoration: none;
 }
-footer ul li a:hover {
+footer a:hover {
   text-decoration: underline;
 }
-footer ul li a i {
+footer i {
   color: white;
   font-size: 0.8rem;
 }
 
-/* Reset CSS sur le body */
-/* VARIABLES */
-/* HEADER */
 /* LOCALISATION */
 #localisation {
   width: 100%;
-  height: auto;
 }
 #localisation .gps {
   width: 100%;
   height: auto;
   margin: 0;
   padding: 1rem;
-  background-color: #8080804b;
+  background-color: rgba(128, 128, 128, 0.178);
 }
 #localisation .gps ul {
   width: 100%;
@@ -106,10 +109,9 @@ footer ul li a i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(128, 128, 128, 0.05);
 }
 #localisation .explore h2 {
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 #localisation .explore p {
@@ -117,24 +119,62 @@ footer ul li a i {
 }
 #localisation .explore button {
   padding: 1rem;
-  background-color: #9356DC;
-  color: white;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   border: none;
   border-radius: 3rem;
+}
+#localisation .explore button strong {
+  color: white;
+}
+
+#functioning {
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1rem 4rem 1rem;
+}
+#functioning .step_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+#functioning .step_box .step {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: rgba(128, 128, 128, 0.05);
+  box-shadow: 0rem 0rem 0.2rem 0.2rem rgba(128, 128, 128, 0.178);
+}
+#functioning .step_box .step figure {
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#functioning .step_box i {
+  padding: 2rem;
+  font-size: 1.5rem;
 }
 
 /* RESTAURANTS */
 #restaurants {
   width: 100%;
   height: auto;
-  background-color: #8080804b;
-  padding: 1rem 1rem 3rem 1rem;
+  background-color: rgba(128, 128, 128, 0.05);
+  padding: 3.5rem 1rem 4rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-#restaurants h1 {
-  margin-bottom: 0;
 }
 
 .restaurantsBox {
@@ -155,6 +195,7 @@ footer ul li a i {
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
+  box-shadow: 0rem 0rem 0.2rem 0.2rem rgba(128, 128, 128, 0.178);
 }
 
 .restaurantCardImage {
@@ -175,11 +216,12 @@ footer ul li a i {
   top: 1rem;
   right: 1rem;
   padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 0.2rem;
 }
 .restaurantCardImage span p {
   margin: 0;
   padding: 0;
-  color: #185818;
+  color: rgba(24, 88, 24, 0.753);
   font-weight: bold;
 }
 
@@ -237,98 +279,5 @@ footer ul li a i {
   }
 }
 /* FOOTER */
-/* 
-1. INSTALLATION DE SASS
-
-Depuis le site SASS en mode standAlone (depuis page github)
-on DL une archive, le dossier s'appelle dart-sass
-on le met dans le projet
-on crée ensuite un dossier sass avec toutes les feuilles dedans
-la principale étant style.scss
-
-on travaille ensuite avec le terminal
-./dart-sass/sass --help
-
-pour générer un fichier css
-./dart-sass/sass sass/style.scss style.css
-on a aussi un fichier style.css.map
-
-Pour suivre directement on utilise --watch
-./dart-sass/sass sass/style.scss style.css --watch
-
-On teste le fichier .map
-On crée une structure HTML5
-Le fichier map permet d'expliquer au navigateur le lien entre chaque ligne css et scss
-
-Exemple import de fichier
-minireset css
-@import "libs/reset.css";
-
-il est possible ensuite d'installer SASS globalement depuis le système
-pour l'utiliser depuis le path
-
-
-2. IMBRICATION
-
-cela permet d'imbriquer et d'utiliser la syntaxe suivante
-
-.btn {
-    background: #FFF;
-
-    .icon {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background: red;
-    }
-
-    &:hover {
-        background: #000;
-    }
-
-}
-
-QUI DONNERA LE CODE SUIVANT
-
-.btn {
-    background: #FFF;
-}
-.btn .icon {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background: red;
-}
-.btn:hover {
-    background: #000;
-}
-
-c'est bien d'utiliser 2 niveaux maximum en descendant 
-
-le & permet de les mettre directement collés
-
-et dans l'autre sens aussi, par exemple:
-
-.btn{
-    .theme-vert & {
-        background: green;
-    }
-}
-
-donnera
-
-.theme-vert .btn{
-    background: green;
-}
-
-on peut aussi écrire les mediaqueries dans l'imbrication
-seul inconvenient, ça ne groupe pas les mediaqueries dans le css final
-
-
-3. HERITAGE SUR SASS
-
-
-
-*/
 
 /*# sourceMappingURL=style.css.map */
