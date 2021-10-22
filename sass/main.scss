@@ -19,7 +19,7 @@
         height: auto;
         margin: 0;
         padding: 1rem;
-        background-color: $greystrong;
+        background-color: $grey_strong;
 
         ul{
             width: 100%;
@@ -42,7 +42,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $greysoft;
+        background-color: $grey_soft;
 
         h2{
             text-align:center;
@@ -75,7 +75,7 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        padding-top: 2rem;
+        padding: 2rem 0rem 0rem 1rem;
 
         .step{
             width: 100%;
@@ -85,27 +85,42 @@
             justify-content: flex-start;
             align-items: center;
             border-radius: 1rem;
-            background-color: $greysoft;
-            box-shadow: $shadowMedium;
+            background-color: $grey_soft;
+            box-shadow: $shadow_medium;
+            position: relative;
+
+            &:hover{
+                background-color: $purple_hover;
+
+                i{
+                    color: $purple;
+                }
+            }
 
             figure{
-                background-color: $purple;
                 width: 2rem;
                 height: 2rem;
+                margin:0;
+                padding: 0;
                 border-radius: 2rem;
                 background:$purple;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 color: white;
+                position: absolute;
+                top: 1.25rem;
+                left: -1rem;
                 }
-            }
 
             i{
-                padding: 2rem;
+                padding: 2.5rem;
                 font-size: 1.5rem;
+                color: $black_soft;
+
             }
         }
+    }
 }
 
 
@@ -114,7 +129,7 @@
 #restaurants{
     width: 100%;
     height: auto;
-    background-color: $greysoft;
+    background-color: $grey_soft;
     padding: 3.5rem 1rem 4rem 1rem;
     display: flex;
     flex-direction: column;
@@ -139,7 +154,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
-    box-shadow: $shadowMedium;
+    box-shadow: $shadow_medium;
 }
 
 .restaurantCardImage{

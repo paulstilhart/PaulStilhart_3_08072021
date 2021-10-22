@@ -137,7 +137,7 @@ footer i {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-top: 2rem;
+  padding: 2rem 0rem 0rem 1rem;
 }
 #functioning .step_box .step {
   width: 100%;
@@ -149,21 +149,33 @@ footer i {
   border-radius: 1rem;
   background-color: rgba(128, 128, 128, 0.05);
   box-shadow: 0rem 0rem 0.2rem 0.2rem rgba(128, 128, 128, 0.178);
+  position: relative;
+}
+#functioning .step_box .step:hover {
+  background-color: #9256dc13;
+}
+#functioning .step_box .step:hover i {
+  color: #9356DC;
 }
 #functioning .step_box .step figure {
-  background-color: #9356DC;
   width: 2rem;
   height: 2rem;
+  margin: 0;
+  padding: 0;
   border-radius: 2rem;
   background: #9356DC;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  position: absolute;
+  top: 1.25rem;
+  left: -1rem;
 }
-#functioning .step_box i {
-  padding: 2rem;
+#functioning .step_box .step i {
+  padding: 2.5rem;
   font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.801);
 }
 
 /* RESTAURANTS */
