@@ -36,8 +36,8 @@
             text-align:center;
         }
 
-        button{
-            @extend button
+        .btn{
+            @extend .btn
         }
     }
 }

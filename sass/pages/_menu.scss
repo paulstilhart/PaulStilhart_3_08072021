@@ -1,0 +1,69 @@
+#dish{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .dish_image{
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .dish_title{
+        width: 100%;
+        padding: 1rem 1rem 0rem 1rem;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        position: absolute;
+        bottom: 0rem;
+        background-color: $grey_soft;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        i{
+            font-size: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+}
+
+#menu{
+    width: 100%;
+    background-color: $grey_soft;
+    padding: 2rem 1rem 3rem 1rem;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .menu_card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .menu_card_title{
+            width: 2.5rem;
+            padding-bottom: 0.2rem;
+            border-bottom: solid $green;
+
+        }
+
+        
+        }
+
+
+    .button{
+        @extend .btn;
+    }
+}

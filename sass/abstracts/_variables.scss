@@ -1,14 +1,15 @@
 
 
-$grey_strong:rgba(128, 128, 128, 0.178);
-$grey_soft:rgba(128, 128, 128, 0.050);
+$grey_strong:rgb(233, 233, 233);
+$grey_soft:rgb(247, 247, 247);
 $green: #99E2D0;
 $pink: #FF79DA;
 $purple: #9356DC;
 $purple_hover: #9256dc13;
+$grey: #99E2D0;
 $black_soft: rgba(0, 0, 0, 0.801);
 $gradient: linear-gradient(0deg,$purple,$pink);
-$shadow_medium: 0rem 0rem 0.2rem 0.2rem $grey_strong;
+$shadow_medium: 0rem 0rem 0.2rem 0.2rem rgb(212, 212, 212);
 
 
 

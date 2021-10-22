@@ -7,8 +7,19 @@ header{
     align-items: center;
     padding: 1rem;
     box-shadow: $shadow_medium;
+    position: relative;
 
     h1{
         font-size: 2rem;
     }
+
+    i{
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        padding: 1.25rem;
+        font-size: 1.5rem;
+        color: $black_soft;
+    }
+
 }
