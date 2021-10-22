@@ -6,6 +6,8 @@ et définition des variables
   box-sizing: border-box;
   color: black;
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -16,22 +18,20 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
-body {
+body, main {
   width: 100%;
   height: 100%;
-  padding: 0;
-  margin: 0;
-}
-body main {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-h1, h2, h3, h4 {
-  margin: 0;
-  padding: 0;
+/* Bouton Explorer nos restaurants et Commander */
+button, #localisation .explore button {
+  padding: 1rem;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  border: none;
+  border-radius: 3rem;
+}
+button strong, #localisation .explore button strong {
+  color: white;
 }
 
 header {
@@ -42,7 +42,6 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin: 0;
   box-shadow: 0rem 0rem 0.2rem 0.2rem rgba(128, 128, 128, 0.178);
 }
 header h1 {
@@ -60,8 +59,6 @@ footer h1 {
   padding: 0rem 0rem 1rem 0rem;
 }
 footer ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 footer li {
@@ -85,16 +82,11 @@ footer i {
 }
 #localisation .gps {
   width: 100%;
-  height: auto;
-  margin: 0;
   padding: 1rem;
   background-color: rgba(128, 128, 128, 0.178);
 }
 #localisation .gps ul {
   width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -103,13 +95,13 @@ footer i {
 }
 #localisation .explore {
   width: 100%;
-  height: auto;
   padding: 2rem 2rem 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(128, 128, 128, 0.05);
+  gap: 1rem;
 }
 #localisation .explore h2 {
   text-align: center;
@@ -117,19 +109,8 @@ footer i {
 #localisation .explore p {
   text-align: center;
 }
-#localisation .explore button {
-  padding: 1rem;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  border: none;
-  border-radius: 3rem;
-}
-#localisation .explore button strong {
-  color: white;
-}
-
 #functioning {
   width: 100%;
-  margin: 0;
   padding: 3rem 1rem 4rem 1rem;
 }
 #functioning .step_box {
@@ -160,8 +141,6 @@ footer i {
 #functioning .step_box .step figure {
   width: 2rem;
   height: 2rem;
-  margin: 0;
-  padding: 0;
   border-radius: 2rem;
   background: #9356DC;
   display: flex;
@@ -181,7 +160,6 @@ footer i {
 /* RESTAURANTS */
 #restaurants {
   width: 100%;
-  height: auto;
   background-color: rgba(128, 128, 128, 0.05);
   padding: 3.5rem 1rem 4rem 1rem;
   display: flex;
@@ -191,7 +169,6 @@ footer i {
 
 .restaurantsBox {
   width: 100%;
-  height: auto;
   gap: 1rem;
   display: flex;
   flex-direction: column;
@@ -222,8 +199,6 @@ footer i {
 }
 .restaurantCardImage span {
   background-color: #99E2D0;
-  width: auto;
-  height: auto;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -231,8 +206,6 @@ footer i {
   border-radius: 0.2rem;
 }
 .restaurantCardImage span p {
-  margin: 0;
-  padding: 0;
   color: rgba(24, 88, 24, 0.753);
   font-weight: bold;
 }
@@ -241,7 +214,6 @@ footer i {
   width: 100%;
   height: 30%;
   background-color: white;
-  margin: 0;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -250,12 +222,8 @@ footer i {
 }
 .restaurantCardDescription p {
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 .restaurantCardDescription span {
-  width: auto;
-  height: auto;
   position: absolute;
   top: 1rem;
   right: 1.5rem;
@@ -272,7 +240,6 @@ footer i {
 @media screen and (min-width: 767px) {
   .restaurantsBox {
     width: 100%;
-    height: auto;
     gap: 1rem;
     display: flex;
     flex-direction: row;
@@ -290,6 +257,5 @@ footer i {
     text-decoration: none;
   }
 }
-/* FOOTER */
 
 /*# sourceMappingURL=style.css.map */
