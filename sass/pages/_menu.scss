@@ -30,9 +30,21 @@
         justify-content: space-between;
         align-items: center;
 
-        i{
-            font-size: 1.5rem;
-            padding-right: 1.5rem;
+        span{
+            position:absolute;
+            top: 1.2rem;
+            right: 2rem;
+            font-size:1.5rem;
+        }
+
+        .fullHeart{
+            i{
+                color: rgba(255, 255, 255, 0);
+
+                &:hover{
+                    color: $purple;
+                }
+            }
         }
     }
 }
@@ -40,7 +52,7 @@
 #menu{
     width: 100%;
     background-color: $grey_soft;
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 0rem 1rem 3rem 1rem;
     gap: 3rem;
     display: flex;
     flex-direction: column;
@@ -51,17 +63,23 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        gap:1rem;
 
         .menu_card_title{
             width: 2.5rem;
+            padding-top:2rem;
             padding-bottom: 0.2rem;
             border-bottom: solid $green;
 
         }
 
-        
+        .menu_card_dish{
+            width: 100%;
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 1rem;
         }
-
+    }
 
     .button{
         @extend .btn;

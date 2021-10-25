@@ -60,9 +60,9 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             background-color: $grey_soft;
-            box-shadow: $shadow_medium;
+            box-shadow: $shadow_soft;
             position: relative;
 
             &:hover{
@@ -126,7 +126,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
-    box-shadow: $shadow_medium;
+    box-shadow: $shadow_soft;
 }
 
 .restaurantCardImage{
@@ -175,7 +175,7 @@
             right: 1.5rem;
             font-size:1.5rem;
         }
-
+        
         .fullHeart{
             i{
                 color: rgba(255, 255, 255, 0);
