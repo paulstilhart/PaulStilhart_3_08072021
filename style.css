@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* COULEURS */
+/* RESPONSIVES */
 /* Reset CSS sur le body 
 et définition des variables
 */
@@ -334,8 +336,44 @@ footer i {
 #menu .menu_card .menu_card_dish {
   width: 100%;
   background-color: white;
-  padding: 0.5rem;
+  padding: 0rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0rem 0rem 0.5rem 0.2rem #ececec;
+  overflow: hidden;
+}
+#menu .menu_card .menu_card_dish:hover .menu_card_dish_selection {
+  margin-right: 0;
+}
+#menu .menu_card .menu_card_dish .menu_card_dish_text {
+  width: 100%;
+  padding: 1rem 0rem 1rem 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#menu .menu_card .menu_card_dish .menu_card_dish_text h3 {
+  padding-bottom: 0.5rem;
+}
+#menu .menu_card .menu_card_dish .menu_card_dish_price {
+  padding: 1rem 2.5rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#menu .menu_card .menu_card_dish .menu_card_dish_selection {
+  width: 30%;
+  background-color: #99E2D0;
+  margin-right: -30%;
+  transition: 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu .menu_card .menu_card_dish .menu_card_dish_selection i {
+  font-size: 1.5rem;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
