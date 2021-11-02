@@ -342,25 +342,35 @@ footer i {
   flex-direction: row;
   box-shadow: 0rem 0rem 0.5rem 0.2rem #ececec;
   overflow: hidden;
+  gap: 0rem;
 }
 #menu .menu_card .menu_card_dish:hover .menu_card_dish_selection {
   margin-right: 0;
 }
-#menu .menu_card .menu_card_dish .menu_card_dish_text {
+#menu .menu_card .menu_card_dish .menu_card_dish_description {
   width: 100%;
-  padding: 1rem 0rem 1rem 1rem;
+  padding: 1rem 0rem 1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+}
+#menu .menu_card .menu_card_dish .menu_card_dish_description h3 {
+  padding-bottom: 0.5rem;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
-#menu .menu_card .menu_card_dish .menu_card_dish_text h3 {
-  padding-bottom: 0.5rem;
+#menu .menu_card .menu_card_dish .menu_card_dish_description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 #menu .menu_card .menu_card_dish .menu_card_dish_price {
-  padding: 1rem 2.5rem 1rem 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  font-weight: bold;
 }
 #menu .menu_card .menu_card_dish .menu_card_dish_selection {
   width: 30%;

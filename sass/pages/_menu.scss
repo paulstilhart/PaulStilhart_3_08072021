@@ -82,29 +82,39 @@
             flex-direction: row;
             box-shadow: $shadow_soft;
             overflow: hidden;
+            gap: 0rem;
 
             &:hover .menu_card_dish_selection{
                 margin-right: 0;
             }
 
-            .menu_card_dish_text{
+            .menu_card_dish_description{
                 width: 100%;
-                padding: 1rem 0rem 1rem 1rem;
+                padding: 1rem 0rem 1rem 0.8rem;
+                display: flex;
+                flex-direction: column;
                 overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
 
                 h3{
                     padding-bottom: 0.5rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                p{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                 }
             }
 
             .menu_card_dish_price{
-                padding: 1rem 2.5rem 1rem 1rem;
+                padding: 1rem 2rem 1rem 1rem;
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-end;
-
+                font-weight: bold;
             }
 
             .menu_card_dish_selection{
