@@ -87,7 +87,6 @@ footer i {
   font-size: 0.8rem;
 }
 
-/* LOCALISATION */
 #localisation {
   width: 100%;
 }
@@ -168,7 +167,32 @@ footer i {
   color: rgba(0, 0, 0, 0.801);
 }
 
-/* RESTAURANTS */
+@media screen and (min-width: 1023px) {
+  #functioning {
+    width: 100%;
+    padding: 3rem 1rem 4rem 1rem;
+  }
+  #functioning .step_box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem 0rem 0rem 1rem;
+  }
+  #functioning .step_box .step {
+    width: calc(33.33% - 2rem);
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: #f7f7f7;
+    box-shadow: 0rem 0rem 0.5rem 0.2rem #ececec;
+    position: relative;
+  }
+}
 #restaurants {
   width: 100%;
   background-color: #f7f7f7;
@@ -247,7 +271,6 @@ footer i {
   color: #9356DC;
 }
 
-/* RESTAURANTS RESPONSIVES */
 @media screen and (min-width: 767px) {
   .restaurantsBox {
     width: 100%;

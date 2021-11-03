@@ -1,7 +1,4 @@
-
-
-
-/* LOCALISATION */
+// LOCALISATION
 
 #localisation{
     width: 100%;
@@ -44,6 +41,7 @@
         }
     }
 }
+
 
 #functioning{
     width: 100%;
@@ -100,8 +98,41 @@
     }
 }
 
+// FONCTIONNEMENT RESPONSIVE
 
-/* RESTAURANTS */
+@media screen and (min-width: #{$large}){
+    #functioning{
+        width: 100%;
+        padding: 3rem 1rem 4rem 1rem;
+    
+        .step_box{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 3rem;
+            padding: 2rem 0rem 0rem 1rem;
+
+            .step{
+                width: calc(33.33% - 2rem);
+                height: 4.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                border-radius: 1.5rem;
+                background-color: $grey_soft;
+                box-shadow: $shadow_soft;
+                position: relative;
+            }
+        }
+    }
+}
+
+
+
+// RESTAURANTS
+
 
 #restaurants{
     width: 100%;
@@ -190,7 +221,8 @@
         }
 }
 
-/* RESTAURANTS RESPONSIVES */
+// RESTAURANTS RESPONSIVES
+
 
 @media screen and (min-width: #{$medium}){
     .restaurantsBox{
