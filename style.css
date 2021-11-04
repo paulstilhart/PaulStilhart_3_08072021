@@ -239,8 +239,6 @@ footer i {
   right: 1rem;
   padding: 0.3rem 0.5rem 0.3rem 0.5rem;
   border-radius: 0.2rem;
-}
-.restaurantCardImage span p {
   color: rgba(24, 88, 24, 0.753);
   font-weight: bold;
 }
