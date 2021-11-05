@@ -6,6 +6,12 @@
     background: $gradient;
     border: none;
     border-radius: 3rem;
+    box-shadow: $shadow_soft;
+
+    &:hover{
+        box-shadow: $shadow_medium;
+        background: $gradient_soft;
+    }
 
     strong{
         color:white;

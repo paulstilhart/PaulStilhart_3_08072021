@@ -18,6 +18,7 @@ et définition des variables
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 
 h1 {
@@ -39,6 +40,11 @@ body, main {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   border: none;
   border-radius: 3rem;
+  box-shadow: 0rem 0rem 0.5rem 0.2rem #ececec;
+}
+.btn:hover, #menu .button:hover, #localisation .explore .btn:hover {
+  box-shadow: 0rem 0rem 0.2rem 0.2rem #d4d4d4;
+  background: linear-gradient(0deg, #a069e2, #fc9be0);
 }
 .btn strong, #menu .button strong, #localisation .explore #menu .button strong, #menu #localisation .explore .button strong, #localisation .explore .btn strong {
   color: white;
@@ -99,49 +105,67 @@ footer i {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 99;
-  animation-duration: 3000ms;
+  animation-duration: 2500ms;
   animation-name: loader_background;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.progress .progress_bar {
-  width: 50%;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.progress .progress_bar .progress_bar_expansion {
-  height: 100%;
-  background-color: #99E2D0;
-  animation-delay: 1000ms;
-  animation-duration: 2000ms;
-  animation-name: loader;
-}
-
 @keyframes loader_background {
   0% {
     background-color: rgba(255, 255, 255, 0.9);
+    z-index: 99;
   }
   99% {
     background-color: rgba(255, 255, 255, 0.9);
+    z-index: 99;
   }
   100% {
     background-color: rgba(255, 255, 255, 0);
+    z-index: 0;
   }
+}
+.progress .progress_bar {
+  width: 70%;
+  height: 2rem;
+  animation-name: loader_border;
+  animation-delay: 800ms;
+  animation-duration: 1500ms;
+  animation-timing-function: linear;
+}
+@keyframes loader_border {
+  0% {
+    border: solid black 0.2rem;
+  }
+  99% {
+    border: solid black 0.2rem;
+  }
+  100% {
+    border: solid rgba(255, 255, 255, 0) 0.2rem;
+  }
+}
+.progress .progress_bar .progress_bar_expansion {
+  height: 100%;
+  animation-delay: 800ms;
+  animation-duration: 1500ms;
+  animation-name: loader;
+  animation-timing-function: ease-in-out;
 }
 @keyframes loader {
   0% {
     width: 0%;
-    border: solid black 0.2rem;
+    background-color: #99E2D0;
+  }
+  99% {
+    width: 99%;
+    background-color: #99E2D0;
   }
   100% {
     width: 100%;
-    border: solid black 0.2rem;
+    background-color: rgba(255, 255, 255, 0);
   }
 }
+
 #localisation {
   width: 100%;
 }
@@ -469,6 +493,60 @@ footer i {
   font-size: 1.5rem;
   color: white;
 }
+.starters {
+  animation-duration: 1000ms;
+  animation-name: starters;
+  animation-timing-function: linear;
+}
+@keyframes starters {
+  0% {
+    transform: scale(0);
+  }
+  33% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dishes {
+  animation-duration: 1000ms;
+  animation-name: dishes;
+  animation-timing-function: linear;
+}
+@keyframes dishes {
+  0% {
+    transform: scale(0);
+  }
+  33% {
+    transform: scale(0);
+  }
+  66% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.deserts {
+  animation-duration: 1000ms;
+  animation-name: deserts;
+  animation-timing-function: linear;
+}
+@keyframes deserts {
+  0% {
+    transform: scale(0);
+  }
+  66% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media screen and (min-width: 1023px) {
   #menu {
     width: 100%;
