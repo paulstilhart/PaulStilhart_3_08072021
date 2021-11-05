@@ -11,22 +11,23 @@ footer{
 
     ul{
         list-style: none;
-    }
 
-    li{
-        padding-bottom: 0.5rem;
-    }
+        li{
+            padding-bottom: 0.5rem;
 
-    a{
-        color: white;
-        text-decoration: none;
-        &:hover{
-            text-decoration:underline;
+            a{
+                color: white;
+                text-decoration-line: none;
+
+                &:hover{
+                    text-decoration-line: underline;
+                }
+                
+                i{
+                    color:white;
+                    font-size: 0.8rem;
+                }
+            }
         }
-    }
-    
-    i{
-        color:white;
-        font-size: 0.8rem;
     }
 }

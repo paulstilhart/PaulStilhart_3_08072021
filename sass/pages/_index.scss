@@ -6,22 +6,28 @@
     position:fixed;
     animation-duration: 2500ms;
     animation-name: loader_background;
+    animation-iteration-count: 1;
+    z-index: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
 
     @keyframes loader_background{
         0%{
             background-color:rgba(255, 255, 255, 0.9);
             z-index: 99;
+            visibility: visible;
         }
         99%{
             background-color:rgba(255, 255, 255, 0.9);
             z-index: 99;
+            visibility: visible;
         }
         100%{
           background-color:rgba(255, 255, 255, 0);
           z-index: 0;
+          visibility: hidden;
         }
     }
 
