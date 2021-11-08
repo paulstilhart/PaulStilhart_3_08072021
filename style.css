@@ -461,6 +461,10 @@ footer ul li a i {
 #menu .menu_card .menu_card_dish:hover .menu_card_dish_selection {
   margin-right: 0;
 }
+#menu .menu_card .menu_card_dish:hover .menu_card_dish_selection i {
+  transform: rotate(360deg);
+  transition: transform 400ms ease-in-out;
+}
 #menu .menu_card .menu_card_dish .menu_card_dish_description {
   width: 100%;
   padding: 1rem 0rem 1rem 0.8rem;
