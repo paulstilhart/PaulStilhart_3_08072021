@@ -352,6 +352,7 @@ footer ul li a i {
 }
 .restaurantCardDescription .fullHeart i:hover {
   color: #9356DC;
+  transition: 400ms;
 }
 
 @media screen and (min-width: 767px) {
@@ -415,6 +416,7 @@ footer ul li a i {
 }
 #dish .dish_title .fullHeart i:hover {
   color: #9356DC;
+  transition: 400ms;
 }
 
 #menu {
